@@ -1,0 +1,8 @@
+env-variables.json
+package-lock.json
+node_modules/
+dist/
+react-dist/
+out/
+builder-conf/cache/*
+!builder-conf/cache/KEEPME

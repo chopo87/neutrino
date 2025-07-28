@@ -1,0 +1,36 @@
+{
+  "name": "neutrino",
+  "version": "1.0.0",
+  "description": "Electron-Updater test project",
+  "keywords": [
+    "neutrino",
+    "electron-updater"
+  ],
+  "license": "ISC",
+  "author": "Aitzol CASADO-REMON",
+  "type": "commonjs",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "electron ."
+  },
+  "build": {
+    "appId": "com.chopo.lepton.neutrino",
+    "productName": "Neutrino auto-updater",
+    "win": {
+      "target": [
+        "msi"
+      ]
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "^37.2.4",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "electron-updater": "^6.6.2"
+  }
+}
