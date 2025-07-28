@@ -12,15 +12,25 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "test": "electron ."
+    "test": "electron .",
+    "build": "electron-builder"
   },
   "build": {
     "appId": "com.chopo.lepton.neutrino",
     "productName": "Neutrino auto-updater",
+    "artifactName": "${name}-setup-${version}.${ext}",
     "win": {
-      "target": [
-        "msi"
-      ]
+      "target": ["msi", "nsis"],
+      "icon": "src/resources/neutrino_256.ico"
+    },
+    "msi": {
+      "oneClick": false,
+      "perMachine": true
+    },
+    "nsis": {
+      "perMachine": true,
+      "installerHeaderIcon": "src/resources/neutrino_256.ico",
+      "deleteAppDataOnUninstall": true
     },
     "directories": {
       "output": "dist"
