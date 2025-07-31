@@ -29,8 +29,9 @@ app.whenReady().then(() => {
 
 /*New Update Available*/
 autoUpdater.on('update-available', (info) => {
+  let udinfo = JSON.stringify(info);
   homeWindow?.showMessage(
-    `Update available. Current version ${app.getVersion()}`
+    `Update available. Current version ${app.getVersion()}\n${udinfo}`
   );
   let pth = autoUpdater.downloadUpdate();
   homeWindow?.showMessage(pth);
@@ -44,8 +45,10 @@ autoUpdater.on('update-not-available', (info) => {
 
 /*Download Completion Message*/
 autoUpdater.on('update-downloaded', (info) => {
+  let udpath = info?.files?.[0]?.url || info?.path;
+  let udinfo = JSON.stringify(info);
   homeWindow.showMessage(
-    `Update downloaded. Current version ${app.getVersion()}`
+    `Update downloaded. Current version ${app.getVersion()} at path ${udpath}\n${udinfo}`
   );
 });
 
