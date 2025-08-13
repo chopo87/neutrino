@@ -11,6 +11,8 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../resources/css/neutrino.css" />
     <title>Hello from Lepton Neutrino!</title>
   </head>
   <body>
@@ -22,8 +24,12 @@
     <p>This is a new paragraph that was added post update</p>
     <img src="./resources/shaunTheSheep.jpeg" />
 
-    <h2>Auto update information:</h2>
-    <pre id="message">Status messages will display here:</pre>
+    <h2 id="log-heading">Auto update information:</h2>
+    <div class="card">
+      <pre id="message" class=".pre-scrollable">
+Status messages will display here:</pre
+      >
+    </div>
     <script defer src="./homeView.js"></script>
   </body>
 </html>

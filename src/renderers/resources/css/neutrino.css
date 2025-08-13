@@ -1,0 +1,11 @@
+body {
+  padding: 2rem;
+}
+
+h2#log-heading {
+  margin-top: 2rem;
+}
+
+div.card {
+  padding: 1rem;
+}
